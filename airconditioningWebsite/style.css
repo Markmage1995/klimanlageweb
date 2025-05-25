@@ -1,0 +1,356 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(to right, #0077be, #ffcc33); /* Blue to Orange/Yellow gradient */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.1); /* Slight transparency to show gradient */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd77; /* Lighter shade of the orange for hover */
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    background-color: #ff9900; /* Orange button */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+}
+
+.search-icon {
+    color: #ffffff;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+/* Hero Section Styles */
+.hero {
+    padding-top: 150px; /* Adjust based on header height + desired space */
+    padding-bottom: 80px;
+    min-height: 70vh; /* Ensure it takes up a good portion of the viewport */
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    color: #ffffff;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 3.5em; /* Large text like "Create Men air condition." */
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.cta-button {
+    background-color: #ff9900; /* Orange button like "Lign now" */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #e68a00;
+}
+
+.hero-image-placeholder {
+    flex: 1;
+    max-width: 45%;
+    background-color: rgba(255, 255, 255, 0.2); /* Placeholder styling */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    min-height: 300px; /* Example height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: rgba(255,255,255,0.7);
+}
+
+
+/* Content Section Styles */
+.content-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    margin-top: 0; /* No margin if hero has enough padding */
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.content-section h2 {
+    font-size: 2.5em;
+    color: #005a8d; /* Darker blue for headings */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-section h3 {
+    font-size: 1.8em;
+    color: #0077be; /* Main blue for subheadings */
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffcc33; /* Orange underline */
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.content-section p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.content-section ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.content-section ul li strong {
+    color: #005a8d;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Adjustments (Basic Example) */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text {
+        max-width: 100%;
+    }
+    .hero-image-placeholder {
+        max-width: 70%;
+        margin-top: 30px;
+    }
+    .hero-text h1 {
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 5px 10px;
+    }
+    .header-actions {
+        margin-top: 10px;
+    }
+    .hero {
+        padding-top: 200px; /* More space for stacked header */
+    }
+    .hero-text h1 {
+        font-size: 2.2em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .content-section h2 {
+        font-size: 2em;
+    }
+    .content-section h3 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+/* Dark Features Section */
+.dark-features-section {
+    background-color: #222222; /* Dark background similar to the image */
+    padding: 60px 0;
+    color: #f0f0f0; /* Light text color for this section */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 40px 20px; /* Gap between items (row-gap column-gap) */
+    margin-bottom: 50px;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-icon {
+    margin-bottom: 15px;
+    height: 50px; /* Adjust as needed for your icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon svg { /* Style for the placeholder SVGs */
+    width: 48px;
+    height: 48px;
+    stroke: #ffffff; /* White stroke for line icons */
+    stroke-width: 1; /* Thin lines for icons */
+}
+
+/* Styling for h4 within the dark features section */
+.dark-features-section .feature-item h4 {
+    font-size: 1.1em; /* Adjust size as needed */
+    font-weight: 500; /* Slightly bolder than normal text */
+    color: #ffffff; /* White color for the h4 text */
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Assuming you're using Roboto from previous styles */
+}
+
+.features-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.features-button {
+    background-color: #ffcc33; /* Yellow button background like in the image */
+    color: #222222; /* Dark text color for the button */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.features-button:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+    color: #000000;
+}
+
+/* Adjustments for smaller screens for the grid */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 30px 15px;
+    }
+    .dark-features-section .feature-item h4 {
+        font-size: 1em;
+    }
+    .feature-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        /* On very small screens, you might want 2 columns or even 1 */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+     .dark-features-section .feature-item h4 {
+        font-size: 0.9em;
+    }
+}
